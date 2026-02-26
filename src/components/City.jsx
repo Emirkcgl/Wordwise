@@ -1,5 +1,5 @@
 import styles from "./City.module.css";
-import { useParams } from "react-router-dom";
+import { useParams, useSearchParams } from "react-router-dom";
 const formatDate = (date) =>
   new Intl.DateTimeFormat("en", {
     day: "numeric",
@@ -10,6 +10,12 @@ const formatDate = (date) =>
 
 function City() {
   const { id } = useParams();
+
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  const lat = searchParams.get("lat");
+  const lng = searchParams.get("lng");
+
   // TEMP DATA
   const currentCity = {
     cityName: "Lisbon",
@@ -20,17 +26,18 @@ function City() {
 
   const { cityName, emoji, date, notes } = currentCity;
 
-  return <h1>City {id}</h1>;
+  return (
+    <h1>
+      City {id}
+      <p>
+        {" "}
+        position: {lat}, {lng}
+      </p>
+    </h1>
+  );
 
   /* return (
     <div className={styles.city}>
-      <div className={styles.row}>
-        <h6>City name</h6>
-        <h3>
-          <span>{emoji}</span> {cityName}
-        </h3>
-      </div>
-
       <div className={styles.row}>
         <h6>You went to {cityName} on</h6>
         <p>{formatDate(date || null)}</p>
