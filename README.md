@@ -1,8 +1,35 @@
-# React + Vite
+# WorldWise
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Vite + React ile geliştirilen, gezilen şehir ve ülkeleri harita üzerinde takip etmeye yarayan uygulama. Bu proje, aşağıdaki konuların pratikte pekiştirilmesi amacıyla yapılmıştır.
 
-Currently, two official plugins are available:
+## Bu projede pekiştirilen konular
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Vite ile ilk uygulama** — WorldWise projesinin kurulumu
+- **Routing ve SPA** — Tek sayfa uygulamaları ve React Router
+- **Sayfalar ve rotalar** — Ana sayfalar ile route yapısı
+- **`<Link />` ve `<NavLink />`** — Rotalar arası geçiş
+- **React’ta stil seçenekleri** — Genel stil yaklaşımları
+- **CSS Modules** — Bileşen bazlı stiller
+- **Sayfaların inşası** — Homepage, Pricing, Product, Login vb.
+- **App layout** — Uygulama iskeleti (Sidebar, Map)
+- **Nested routes ve index route** — İç içe rotalar
+- **Cities list** — Şehir listesi implementasyonu
+- **Countries list** — Ülke listesi implementasyonu
+- **State’i URL’de tutma** — State’in URL ile yönetimi
+- **Dynamic routes** — URL parametreleri ile dinamik rotalar
+- **Query string** — Okuma ve yazma
+
+*İleride ek konular veya özellikler bu bölüme eklenebilir.*
+
+## Çalıştırma
+
+```bash
+npm install
+npm run dev
+```
+
+API için (ayrı terminalde):
+
+```bash
+npm run server
+```
