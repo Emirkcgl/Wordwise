@@ -1,23 +1,37 @@
 # WorldWise
 
-Vite + React ile geliştirilen, gezilen şehir ve ülkeleri harita üzerinde takip etmeye yarayan uygulama. Bu proje, aşağıdaki konuların pratikte pekiştirilmesi amacıyla yapılmıştır.
+Vite + React ile geliştirilen, gezilen şehir ve ülkeleri harita üzerinde takip etmeye yarayan uygulama.
+
+## Teknolojiler
+
+- **React 18** + **Vite**
+- **React Router** (nested routes, dynamic `:id`, index route)
+- **Leaflet** + **react-leaflet** — harita
+- **Context API** (`CitiesContext`) — şehir verisi ve state
+- **json-server** — mock API (`data/cities.json`)
+- **CSS Modules** — bileşen stilleri
+
+## Proje yapısı
+
+- **Rotalar:** `/` (Homepage), `/pricing`, `/product`, `/login`, `/app` (Sidebar + Map)
+- **App alt rotaları:** `/app/cities`, `/app/countries`, `/app/cities/:id`, `/app/form`
+- **Bileşenler:** Map (Leaflet), Sidebar, CityList, CountryList, City (detay), Form, PageNav, Logo, vb.
+- **Veri:** Şehirler `CitiesContext` üzerinden; API için `json-server` ile `data/cities.json` kullanılır.
 
 ## Bu projede pekiştirilen konular
 
-- **Vite ile ilk uygulama** — WorldWise projesinin kurulumu
-- **Routing ve SPA** — Tek sayfa uygulamaları ve React Router
-- **Sayfalar ve rotalar** — Ana sayfalar ile route yapısı
+- **Vite ile ilk uygulama** — WorldWise kurulumu
+- **Routing ve SPA** — React Router ile tek sayfa uygulaması
+- **Sayfalar ve rotalar** — Ana sayfalar, nested routes
 - **`<Link />` ve `<NavLink />`** — Rotalar arası geçiş
-- **React’ta stil seçenekleri** — Genel stil yaklaşımları
-- **CSS Modules** — Bileşen bazlı stiller
-- **Sayfaların inşası** — Homepage, Pricing, Product, Login vb.
-- **App layout** — Uygulama iskeleti (Sidebar, Map)
-- **Nested routes ve index route** — İç içe rotalar
-- **Cities list** — Şehir listesi implementasyonu
-- **Countries list** — Ülke listesi implementasyonu
-- **State’i URL’de tutma** — State’in URL ile yönetimi
-- **Dynamic routes** — URL parametreleri ile dinamik rotalar
-- **Query string** — Okuma ve yazma
+- **React’ta stil seçenekleri** — CSS Modules
+- **Sayfaların inşası** — Homepage, Pricing, Product, Login
+- **App layout** — Sidebar + Map, `Outlet`
+- **Nested routes ve index route** — `/app` alt yapısı
+- **Cities / Countries list** — Liste bileşenleri
+- **State’i URL’de tutma** — Dynamic routes (`cities/:id`), query string
+- **Harita** — Leaflet entegrasyonu
+- **Context** — Global şehir state’i
 
 *İleride ek konular veya özellikler bu bölüme eklenebilir.*
 
@@ -28,8 +42,15 @@ npm install
 npm run dev
 ```
 
-API için (ayrı terminalde):
+Mock API (ayrı terminalde, `data/cities.json` kullanır):
 
 ```bash
 npm run server
+```
+
+Build:
+
+```bash
+npm run build
+npm run preview
 ```
