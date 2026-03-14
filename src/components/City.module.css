@@ -3,12 +3,29 @@
   max-height: 70%;
   background-color: var(--color-dark--2);
   border-radius: 7px;
-  overflow: scroll;
+  overflow-y: auto;
+  overflow-x: hidden;
 
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+
+/* Scrollbar'ı tema ile uyumlu yap (beyazlık gitsin) */
+.city::-webkit-scrollbar {
+  width: 6px;
+}
+.city::-webkit-scrollbar-track {
+  background: var(--color-dark--1);
+  border-radius: 3px;
+}
+.city::-webkit-scrollbar-thumb {
+  background: var(--color-dark--0);
+  border-radius: 3px;
+}
+.city::-webkit-scrollbar-thumb:hover {
+  background: var(--color-light--1);
 }
 
 .row {

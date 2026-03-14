@@ -35,6 +35,66 @@
         "lng": 13.376933665713324
       },
       "id": 98443197
+    },
+    {
+      "cityName": "Paris",
+      "country": "France",
+      "emoji": "🇫🇷",
+      "date": "2027-05-21T11:12:10.138Z",
+      "notes": "Eiffel Tower was incredible",
+      "position": {
+        "lat": 48.856614,
+        "lng": 2.3522219
+      },
+      "id": 54321001
+    },
+    {
+      "cityName": "Rome",
+      "country": "Italy",
+      "emoji": "🇮🇹",
+      "date": "2027-03-09T14:44:12.138Z",
+      "notes": "Best pasta ever",
+      "position": {
+        "lat": 41.902782,
+        "lng": 12.496366
+      },
+      "id": 54321002
+    },
+    {
+      "cityName": "Tokyo",
+      "country": "Japan",
+      "emoji": "🇯🇵",
+      "date": "2027-08-01T18:12:44.138Z",
+      "notes": "Shibuya crossing is crazy",
+      "position": {
+        "lat": 35.6761919,
+        "lng": 139.6503106
+      },
+      "id": 54321003
+    },
+    {
+      "cityName": "New York",
+      "country": "USA",
+      "emoji": "🇺🇸",
+      "date": "2027-06-11T10:31:22.138Z",
+      "notes": "Central Park walk",
+      "position": {
+        "lat": 40.712776,
+        "lng": -74.005974
+      },
+      "id": 54321004
+    },
+    {
+      "cityName": "Istanbul",
+      "country": "Turkey",
+      "emoji": "🇹🇷",
+      "date": "2027-04-17T12:10:33.138Z",
+      "notes": "Bosphorus view",
+      "position": {
+        "lat": 41.00824,
+        "lng": 28.978359
+      },
+      "id": 54321005
     }
   ]
 }
