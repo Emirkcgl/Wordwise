@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "./Map.module.css";
-import { useSearchParams, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {
   MapContainer,
   TileLayer,
@@ -16,6 +16,8 @@ import markerShadow from "leaflet/dist/images/marker-shadow.png";
 import { useCities } from "../contexts/CitiesContext";
 import { useGeolocation } from "../hooks/useGeolocation";
 import Button from "./Button";
+import { useUrlPosition } from "../hooks/useUrlPosition";
+
 const defaultIcon = L.icon({
   iconUrl: markerIcon,
   iconRetinaUrl: markerIcon2x,
@@ -27,9 +29,7 @@ const defaultIcon = L.icon({
 });
 
 export default function Map() {
-  const navigate = useNavigate();
   const [mapPosition, setMapPosition] = useState([40, 0]);
-  const [searchParams] = useSearchParams();
   const {
     isLoading: isLoadingPosition,
     position: geolocationPosition,
@@ -37,10 +37,7 @@ export default function Map() {
   } = useGeolocation();
 
   const { cities } = useCities();
-
-  const maplat = searchParams.get("lat");
-  const maplng = searchParams.get("lng");
-
+  const [maplat, maplng] = useUrlPosition();
   useEffect(
     function () {
       if (maplat && maplng) setMapPosition([maplat, maplng]);
@@ -95,7 +92,7 @@ export default function Map() {
 
 function ChangeCenter({ position }) {
   const map = useMap();
-  console.log(map);
+
   map.setView(position);
   return null;
 }
